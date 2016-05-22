@@ -6,6 +6,7 @@ import org.junit.runner.RunWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.support.DefaultListableBeanFactory;
 import org.springframework.boot.test.SpringApplicationConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.test.context.web.WebAppConfiguration;
@@ -36,6 +37,9 @@ public class PersonControllerTest {
 	@Autowired
     private WebApplicationContext webApplicationContext;
 	
+	@Autowired
+    private DefaultListableBeanFactory beanFactory;
+	
 	@Mock
 	private PersonService personService;
 	
@@ -46,7 +50,10 @@ public class PersonControllerTest {
     public void setup() {
 		initMocks(this);
 		
-		mockMvc = MockMvcBuilders.standaloneSetup(personController).build();
+		beanFactory.destroySingleton("personController");
+		beanFactory.registerSingleton("personController", personController);
+		
+		mockMvc = MockMvcBuilders.webAppContextSetup(webApplicationContext).build();
 	}
 	
 	@Test
