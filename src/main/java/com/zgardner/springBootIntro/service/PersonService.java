@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.zgardner.springBootIntro.repository.PersonRepository;
+import com.zgardner.springBootIntro.model.CreatePersonModel;
 import com.zgardner.springBootIntro.model.PersonModel;
 
 @Service
@@ -16,6 +17,15 @@ public class PersonService {
 	@Autowired
 	public PersonService (PersonRepository personRepository) {
 		this.personRepository = personRepository;
+	}
+	
+	public PersonModel createPerson(CreatePersonModel createPersonModel) {
+		PersonModel personModel = new PersonModel();
+		personModel.setName(createPersonModel.getName());
+		
+		personRepository.save(personModel);
+		
+		return personModel;
 	}
 	
 	public PersonModel findById(Long id) {
