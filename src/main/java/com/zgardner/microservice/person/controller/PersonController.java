@@ -1,4 +1,4 @@
-package com.zgardner.springBootIntro.controller;
+package com.zgardner.microservice.person.controller;
 
 import java.util.List;
 
@@ -12,9 +12,9 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-import com.zgardner.springBootIntro.model.CreatePersonModel;
-import com.zgardner.springBootIntro.model.PersonModel;
-import com.zgardner.springBootIntro.service.PersonService;
+import com.zgardner.microservice.person.model.CreatePersonModel;
+import com.zgardner.microservice.person.model.PersonModel;
+import com.zgardner.microservice.person.service.PersonService;
 
 @RestController
 @RequestMapping("/person")

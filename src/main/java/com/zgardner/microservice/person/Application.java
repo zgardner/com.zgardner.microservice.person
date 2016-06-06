@@ -1,4 +1,4 @@
-package com.zgardner.springBootIntro;
+package com.zgardner.microservice.person;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

@@ -1,4 +1,4 @@
-package com.zgardner.springBootIntro.controller;
+package com.zgardner.microservice.person.controller;
 
 import com.google.gson.Gson;
 import org.junit.Before;
@@ -22,10 +22,10 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
-import com.zgardner.springBootIntro.Application;
-import com.zgardner.springBootIntro.model.PersonModel;
-import com.zgardner.springBootIntro.model.CreatePersonModel;
-import com.zgardner.springBootIntro.repository.PersonRepository;
+import com.zgardner.microservice.person.Application;
+import com.zgardner.microservice.person.model.CreatePersonModel;
+import com.zgardner.microservice.person.model.PersonModel;
+import com.zgardner.microservice.person.repository.PersonRepository;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @SpringApplicationConfiguration(classes = Application.class)

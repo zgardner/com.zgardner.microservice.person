@@ -1,4 +1,4 @@
-package com.zgardner.springBootIntro.model;
+package com.zgardner.microservice.person.model;
 
 public class CreatePersonModel {	
 	private String name;

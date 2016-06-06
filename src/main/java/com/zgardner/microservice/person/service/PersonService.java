@@ -1,13 +1,13 @@
-package com.zgardner.springBootIntro.service;
+package com.zgardner.microservice.person.service;
 
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.zgardner.springBootIntro.repository.PersonRepository;
-import com.zgardner.springBootIntro.model.CreatePersonModel;
-import com.zgardner.springBootIntro.model.PersonModel;
+import com.zgardner.microservice.person.model.CreatePersonModel;
+import com.zgardner.microservice.person.model.PersonModel;
+import com.zgardner.microservice.person.repository.PersonRepository;
 
 @Service
 public class PersonService {

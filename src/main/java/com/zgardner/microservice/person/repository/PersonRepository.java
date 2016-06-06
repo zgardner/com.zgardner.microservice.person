@@ -1,11 +1,11 @@
-package com.zgardner.springBootIntro.repository;
+package com.zgardner.microservice.person.repository;
 
 import java.util.List;
 import javax.transaction.Transactional;
 
 import org.springframework.data.repository.CrudRepository;
 
-import com.zgardner.springBootIntro.model.PersonModel;
+import com.zgardner.microservice.person.model.PersonModel;
 
 @Transactional
 public interface PersonRepository extends CrudRepository<PersonModel, Long> {

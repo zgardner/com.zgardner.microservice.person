@@ -1,4 +1,4 @@
-package com.zgardner.springBootIntro.model;
+package com.zgardner.microservice.person.model;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;

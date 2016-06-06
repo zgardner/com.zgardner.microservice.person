@@ -1,4 +1,4 @@
-package com.zgardner.springBootIntro.controller;
+package com.zgardner.microservice.person.controller;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -27,9 +27,10 @@ import java.util.List;
 
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
 
-import com.zgardner.springBootIntro.Application;
-import com.zgardner.springBootIntro.service.PersonService;
-import com.zgardner.springBootIntro.model.PersonModel;
+import com.zgardner.microservice.person.Application;
+import com.zgardner.microservice.person.controller.PersonController;
+import com.zgardner.microservice.person.model.PersonModel;
+import com.zgardner.microservice.person.service.PersonService;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @SpringApplicationConfiguration(classes = Application.class)
